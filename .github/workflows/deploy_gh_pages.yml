@@ -1,0 +1,26 @@
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_pdf_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Build PDF
+        run: |-
+          docker run --rm \
+            --user $(id -u):$(id -g) \
+            -v ${PWD}:/data \
+            drpsychick/texlive-pdflatex pdflatex /data/cv.tex
+
+      - name: Build Github Pages dir
+        run: mv cv.pdf _site/ && chmod 644 _site/cv.pdf
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
