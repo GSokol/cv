@@ -9,6 +9,8 @@
 \RequirePackage{hyperref}
 \RequirePackage{multicol}
 \RequirePackage{enumitem}
+\RequirePackage{svg}
+\RequirePackage{graphicx}
 
 \definecolor{titlecolor}{RGB}{0, 70, 146}
 \definecolor{subsubsectioncolor}{RGB}{51, 51, 51}
@@ -32,6 +34,7 @@
 \titlespacing\subsection{0pt}{4pt plus 3pt minus 3pt}{4pt plus 3pt minus 3pt}
 \titlespacing\subsubsection{0pt}{0pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
 
+
 \newenvironment{bulist}
   {\begin {list}{\textbullet}{\itemsep=0mm}}
   {\end{list}}
@@ -44,7 +47,10 @@
   }
   {\end{bulist}}
 
-\newcommand{\workplace}[4]{\subsection* {#1 -- #2: \textbf{#3} (#4)}}
+\newcommand{\workplace}[5][Moscow]{
+  \subsection* {#2 -- #3: \textbf{#4} (#5)}
+  \subsubsection* {#1}
+}
 
 \newcommand{\techstack}[1]{
   \subsubsection* {Thechnology \& infrostructure stack}
@@ -54,3 +60,8 @@
 \newcommand{\devtools}{
   \subsubsection* {Development \&  management tools \& services}
 }
+
+\newenvironment{topline}
+  {\setlength{\parindent}{0cm}\color{subsubsectioncolor}\Large}
+  {}
+%  {\setlength{\parindent}{default}}

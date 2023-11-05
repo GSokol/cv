@@ -8,33 +8,59 @@
 \begin {document}
 \maketitle
 
+\begin{topline}
+  \textbf{Helsinki}
+  \hspace{\stretch{100}}\textbf{\href{mailto:g.sokol99@g-sokol.info}{g.sokol99@g-sokol.info}}
+  \hspace{\stretch{100}}\textbf{\href{tel:+358406260274}{+358 40 626 0274}}
+  \hspace{\stretch{100}}
+  \textbf{\href{https://www.linkedin.com/in/grigorii-sokolik/}{\includegraphics[height=1em]{li.png}grigorii-sokolik}}
+  \hspace{\stretch{100}}
+  \textbf{\href{https://github.com/GSokol}{\includesvg[height=1em]{github-mark}GSokol}}
+\end{topline}
+
 \section* {About}
-I am a backend developer with more than 10 years of experience. My sphere of
-interest is Go, Python, microservices and Data Engineering. I also want to try
-\textbf{C++} commercial development. \textbf{I have accepted pull requests in
-PHP source and big opensource projects (like codeception, etcd etc.) and some
-contributions to Linux coreutils.} Also I have a bit of experience of
-managing up to 5 members remote development team.
+I am a backend developer with more than 10 years of experience. I have a
+greate experience with the number of programming languages, including Go,
+Python, PHP and TypeScript, deep understanding of specifics of PostgreSQL,
+MySQL, Redis, MongoDB and ClickHouse database, and familiarity with modern
+infrostucture tools like Docker (Docker-Compose), Kubernetes (with Helm, Krane
+templates), Ansible, Chef and Puppet confiuration management systems. Also I
+tried on my own skin microservice design patterns as Sagas, Event Sourcing,
+CQRS, etc. From time to time I make contributions in huge opensource projects
+and have accepted PRs in
+\href{https://github.com/php/php-src/pulls?q=is\%3Apr+is\%3Aclosed+author\%3AGSokol}{\underline{PHP source}},
+\href{https://github.com/coreutils/coreutils/commits?author=GSokol}{\underline{Linux Coreutils}},
+\href{https://github.com/etcd-io/etcd/pulls?q=is\%3Apr+is\%3Aclosed+author\%3AGSokol}{\underline{etcd storage}},
+\href{https://github.com/Codeception/Codeception/pulls?q=is\%3Apr+is\%3Aclosed+author\%3AGSokol}{\underline{Codeception PHP test framework}},
+and some smaller ones. Also I have data enineering and team management
+experience. The last one was in cases when I started the project from scratch
+and it grew to big enough to require involving more engineers.
 
 
 \section* {Experience}
-  \workplace{October 2022}{Present}{Smartly.io}{Data Engineer}
+  \workplace[Helsinki]{October 2022}{Present}{Smartly.io}{Data Engineer}
     \begin{gaas}
       \item Adopted kafka-connect to the company, with allowed to reduce
         backend services integration process form more than month to 2 days.
-      \item Adopted Strimzi kafka operator to provide zero-cost
-        Kafka-as-a-Service for development environmnt.
+      \item Developed and maintain opensource DBT macros for staging Debezium
+        Kafka-Connect sources \\
+        (\href{https://github.com/smartlyio/debezium-stg}{https://github.com/smartlyio/debezium-stg}).
+      \item Adopted \textbf{Strimzi} kafka operator to provide zero-cost
+        Kafka-as-a-Service for development environment.
       \item Developed and implemented TypeScript code generator to enforce
         analytical events structure and integrate with Segment tracking plan.
+      \item eveloped Java UDTF-s to upload huge blobs to Snowflake.
     \end{gaas}
     \techstack{
-      Python, TypeScript, SQL, DBT, Kubernetis, Kafka, Kafka-connect, Debezium,
+      Python, TypeScript, Java, SQL, DBT, Kubernetes, Kafka, Kafka-connect, Debezium,
       Ansible, Aiflow
     }
     \devtools
       Git, Github, Github Actions, Atlassian products, NeoVim, JFrog products
 
-  \workplace{September 2019}{September 2022}{Smartly.io}{Software Engineer}
+  \workplace[Helsinki]{September 2019}{September 2022}{Smartly.io}{Software Engineer}
+    Maintained an integration with Facebook Marketing API. Developed
+    microservices.
     \techstack{
       PHP, TypeScript, JavaScript, React, Angular, Docker, Kubernetes, Ansible,
       Redis, RabbitMQ, PostgreSQL, MongoDB
@@ -58,14 +84,17 @@ managing up to 5 members remote development team.
     }
     \devtools
       Jenkins, PyPi, Git, Vim, Atlassian products, JetBrains products
+  \pagebreak
 
   \workplace{October 2017}{January 2019}{AVITO}{Senior developer}
+    Avito is the most popular classifieds site in Russia and is the biggest
+    classifieds site in the world.
     \begin{gaas}
-      \item create fast, scalable and flexible analytic tool for professional
-        users (very similar to google analytics)
-      \item increase stability of several applications
-      \item begin to lead team (solve internal problems, watch out for
-        motivation etc...)
+      \item Created fast, scalable and flexible analytic tool for professional
+        users (some similar to google analytics).
+      \item Increased stability of several services.
+      \item Began to lead team (solve internal problems, watch out for
+        motivation etc...).
     \end{gaas}
     \techstack{
       Linux, Docker, Kubernetes, PostgreSQL, Vertica, ClickHouse, MongoDB,
@@ -74,14 +103,13 @@ managing up to 5 members remote development team.
     \devtools
       Composer, Git, Vim, Atlassian products, JetBrains products
 
-  \pagebreak
-  \workplace{May 2016}{October 2017}{Ronte Limited}{Team lead}
+  \workplace[Berlin]{May 2016}{October 2017}{Ronte Limited}{Team lead}
+    Build from scratch security first corporate chat (with file sharing,
+    tasks, calendar etc). Then managed a team of two engineers and a dev ops.
     \begin{gaas}
-      \item create project's core architecture (secure chat + p2p calls)
-      \item manage tasks for my programmers
-      \item review code
-      \item manage continuous integration tools
-      \item deploy
+      \item Create project's core architecture (secure chat + p2p calls)
+      \item Implemented CI/CD pipelines an created tools for it.
+      \item Managed development team.
     \end{gaas}
     \techstack{
       Linux, Docker, Kubernetes, MongoDB, ZeroMQ, Reddis, Golang, PHP7,
@@ -93,12 +121,12 @@ managing up to 5 members remote development team.
   \workplace{August 2015}{May 2016}{Delivery club LLC}{Senior developer,
                                                        mobile API expert}
     \begin{gaas}
-      \item refactor ugly cms-like code, implement basic MVC patterns
-      \item develop and integrate new oauth-like security policies
-      \item provide unit-test coverage
-      \item provide guaranties of backward compatibility to previous API
-        versions
-      \item solve daily problems
+      \item Refactored CMS-like code, implement basic MVC patterns.
+      \item Developed and implemented new oauth-like security policies and
+        TLS encryption.
+      \item Implemented unit-test coverage.
+      \item Provided guaranties of backward compatibility to previous API
+        versions.
     \end{gaas}
     \techstack{
       IBM WebSphere, CentOS Linux, MySQL, RabbitMQ, Elastic search, Memcached,
@@ -110,9 +138,8 @@ managing up to 5 members remote development team.
 
   \workplace{Aplil 2015}{August 2015}{Badoo LTD}{Senior developer, billing}
     \begin{gaas}
-      \item Migrate some payment system integration's from oldstyle PHP4 code
-        to modern ones
-      \item Solving daily problems
+      \item Migrated some payment system integration's from oldstyle PHP4 code
+        to the modern one.
     \end{gaas}
     \techstack{
       \ldots (NDA-protected Virtualization level), Suse Linux, Mysql,
@@ -129,10 +156,10 @@ managing up to 5 members remote development team.
     \begin{gaas}
       \item Development management of closed indoor ERP system for binary
         options and bets companies.
-      \item Management group up to 5 developers
-      \item Dealing with designers
-      \item Participation in negotiations with clients to introduce products
-        and discuss technical issues
+      \item Management group up to 5 developers.
+      \item Participation in negotiations with clients and designers to
+        introduce products and discuss technical issues, requirements and
+        qualities.
     \end{gaas}
     \techstack{
       Linux, Mysql, Redis, Memcached, Python (with NumPy/SciPy \& Pandas),
@@ -145,10 +172,10 @@ managing up to 5 members remote development team.
 
   \workplace{May 2013}{June 2013}{Bradbury Lab LTD}{Developer}
     \gaa
-      Development of server-side video stream management application
+      Development of server-side video stream management application.
     \techstack{
       \textbf{Linux}, \textbf{MongoDB}, \textbf{Memcached}, \textbf{Python},
-      Akashi (Django-based frameworke), \textbf{UWSGI}, \textbf{Nginx}
+      Akashi (Django-based framework), \textbf{UWSGI}, \textbf{Nginx}
     }
     \devtools
       Issue tracker (I don't remember was is Jira or Redmine, but deffinitely
@@ -160,8 +187,8 @@ managing up to 5 members remote development team.
     \gaa
       Developing backend web applications:
       \begin{bulist}
-        \item \textbf{\url{http://yourcredithistory.ru}}
-        \item \textbf{\url{http://smartmarket.net}}
+        \item \textbf{\url{https://yourcredithistory.ru}}
+        \item \textbf{\url{https://smartmarket.net}}
       \end{bulist}
     \techstack{
       Debian Linux, PostgreSQL, Memcached, Python, Django, Gevent, Flask,
@@ -173,15 +200,14 @@ managing up to 5 members remote development team.
 
   \workplace{March 2012}{July 2012}{101XP}{Social game porting engineer}
     \subsubsection* {Role}
-      I used to localize apps, that has been bought from foreign developers and
+      I localized apps, that has been bought from foreign developers and
       integrate it with social networks.
     \begin{gaas}
-      \item \textbf{Zombie Lane} -- porting social game from Facebook
-        (\url{http://www.facebook.com}) to Hyves (\url{http://www.hyves.nl})
-      \item \textbf{Wasteland Empires} -- portingsocial game from Facebook
-        (\url{http://www.facebook.com}) to Vkontakte
-        (\url{http://www.vk.com}) and Odnoklassinki
-        (\url{http://www.odnoklassniki.ru})
+      \item \textbf{Zombie Lane} -- porting social game from Facebook to
+        Hyves (\url{https://www.hyves.nl})
+      \item \textbf{Wasteland Empires} -- portingsocial game from Facebook to
+        Vk (\url{https://www.vk.com}) and Odnoklassinki
+        (\url{https://www.odnoklassniki.ru})
     \end{gaas}
     \techstack{
       Debian Linux, Mysql, Memcached, Java, Tomcat, CoachDB, Redis, Python,
@@ -243,15 +269,6 @@ managing up to 5 members remote development team.
 
 \pagebreak
 
-\section* {Management Basics}
-  \begin{multicols}{2}
-    \begin {list}{\textbullet}{\itemsep=0mm}
-      \item Jira
-        \columnbreak
-      \item Redmine
-    \end{list}
-  \end{multicols}
-
 
 \section* {Programming abilities}
   \begin{multicols}{3}
@@ -266,29 +283,34 @@ managing up to 5 members remote development team.
           \item Gevent
           \item SciPy/NumPy/scikit-learn
           \item Pandas
-          \item unittest/unittest2
+          \item unittest
         \end{list}
-      \item \textbf{GO Lang}
-      \item \textbf{ShellScript/Bash}
-      \item \textbf{Memcached}
-      \item \textbf{Redis}
-      \columnbreak
-      \item \textbf{PHP 4/5.x/7.x}
+      \item \textbf{PHP}
         \begin {list}{$\circ$}{}
           \item Silex
-          \item Symfony 2/3/4/5
-          \item Yii
-          \item CakePHP
+          \item Symfony
           \item Composer
           \item XDebug
           \item PHPUnit
         \end{list}
+      \item \textbf{TypeScript}
+        \begin {list}{$\circ$}{}
+          \item Express
+          \item Koajs
+          \item Nextjs
+          \item React (+ Redux)
+          \item Jest
+          \item Karma
+        \end{list}
+      \columnbreak
+      \item \textbf{Go Lang}
+      \item \textbf{ShellScript/Bash}
       \item \textbf{Queues}
         \begin {list}{$\circ$}{}
           \item ZeroMQ
           \item RabbitMQ
+          \item Kafka
         \end{list}
-      \columnbreak
       \item \textbf{SQL DBMS}
         \begin {list}{$\circ$}{}
           \item MySQL
@@ -296,15 +318,35 @@ managing up to 5 members remote development team.
           \item SQLite
           \item H2
         \end{list}
+      \item \textbf{Configuration management}
+        \begin {list}{$\circ$}{}
+          \item Ansible
+          \item Puppet
+          \item Chef
+          \item Terraform
+        \end{list}
+      \columnbreak
       \item \textbf{NOSQL}
         \begin {list}{$\circ$}{}
           \item MongoDB
           \item Cassandra
           \item CoachDB
-          \item Reddis
-          \item Elastic
+          \item Redis
+          \item Memcached
+          \item Elastic Search
+          \item Sphinx
           \item Vertica
           \item ClickHouse
+          \item Snowflake
+        \end{list}
+      \item \textbf{CI/CD}
+        \begin {list}{$\circ$}{}
+          \item Jenkins
+          \item Github Actions
+          \item Gitlab CI
+          \item Helm
+          \item TeamCity
+          \item Salt
         \end{list}
     \end{list}
   \end{multicols}
@@ -312,31 +354,14 @@ managing up to 5 members remote development team.
 
 \section* {Other abilities}
 \begin {list}{\textbullet}{\itemsep=0mm}
-  \item ability to use \textbf{git}, \textbf{mercurial} or \textbf{subversion}
-    version control systems
-  \item strong experience of usage \textbf{Docker}, \textbf{Docker Compose},
-    \textbf{k8s} and \textbf{Helm}
-  \item experience of usage \textbf{TeamCity}, \textbf{Jenkins},
-    \textbf{Travis} and \textbf{Github Actions} CI
-  \item ability to impose in \textbf{LaTeX}
-  \item fluent english
-  \item several skills in \textbf{Java} (\textbf{Maven}, \textbf{Spring 4},
-    \textbf{GWT/Ext GWT}, \textbf{JUnit})
-  \item several skills in \textbf{Android} development
-  \item several skills in \textbf{Javascript} (\textbf{JQuery},
-    \textbf{Lodash}, \textbf{React}, \textbf{Redux}, \textbf{Backbone},
-    \textbf{Bootstrap}, \textbf{ExtJs})
-  \item several skills in \textbf{C/C++} (\textbf{CMake}, \textbf{gtest},
-    \textbf{boost/test}, \textbf{boost/asio}) development and \textbf{linux}
-    administration
+  \item Ability to use \textbf{git}, \textbf{mercurial} or \textbf{subversion}
+    version control systems.
+  \item Ability to impose in \textbf{LaTeX}.
+  \item Fluent English, beginner Finnish.
+  \item Several skills in \textbf{Java} (\textbf{Maven}, \textbf{Spring},
+    \textbf{GWT/Ext GWT}, \textbf{JUnit}).
+  \item Several skills in \textbf{Android} development.
+  \item Several skills in \textbf{C/C++} (\textbf{CMake}, \textbf{gtest},
+    \textbf{boost/test}, \textbf{boost/asio}) development.
 \end {list}
-
-
-\section* {Contact information}
-\textbf{Email}\hspace{\stretch{100}}\textbf{\href{mailto:g.sokol99@g-sokol.info}{g.sokol99@g-sokol.info}}\newline
-\textbf{Phone}\hspace{\stretch{100}}\textbf{\href{tel:+358406260274}{+358 40 626 0274}}\newline
-\textbf{Skype}\hspace{\stretch{100}}\textbf{\href{skype:g\_a\_sokolik?call}{g\_a\_sokolik}}\newline
-\textbf{GitHub}\hspace{\stretch{100}}\textbf{\href{https://github.com/GSokol}{GSokol}}\newline
-\textbf{Dockerhub}\hspace{\stretch{100}}\textbf{\href{https://hub.docker.com/u/gsokol/}{gsokol}}\newline
-\textbf{City}\hspace{\stretch{100}}\textbf{Helsinki}
 \end{document}
