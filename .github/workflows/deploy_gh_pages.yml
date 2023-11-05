@@ -17,7 +17,7 @@ jobs:
           docker run --rm \
             --user $(id -u):$(id -g) \
             -v ${PWD}:/data \
-            drpsychick/texlive-pdflatex \
+            gsokol/texlive-pdflatex \
             pdflatex --shell-escape /data/cv.tex
 
       - name: Build Github Pages dir
