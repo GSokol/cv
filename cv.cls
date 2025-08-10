@@ -16,7 +16,6 @@
 \definecolor{subsubsectioncolor}{RGB}{51, 51, 51}
 
 \setlist{nosep}
-\setlist{noitemsep}
 
 \setlength{\topmargin}{-0.25in}
 \setlength{\headheight}{0in}
@@ -34,12 +33,14 @@
 \titlespacing\subsection{0pt}{4pt plus 3pt minus 3pt}{4pt plus 3pt minus 3pt}
 \titlespacing\subsubsection{0pt}{0pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
 
+\date{\vspace{-10ex}}
+
 
 \newenvironment{bulist}
-  {\begin {list}{\textbullet}{\itemsep=0mm}}
-  {\end{list}}
+  {\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\partopsep}{0pt}}
+  {\end{itemize}}
 
-\newcommand{\gaa}{\subsubsection* {Goals \& achievements}}
+\newcommand{\gaa}{\subsubsection* {Goals \& Achievements}}
 \newenvironment{gaas}
   {
     \gaa
@@ -48,12 +49,12 @@
   {\end{bulist}}
 
 \newcommand{\workplace}[5][Moscow]{
-  \subsection* {#2 -- #3: \textbf{#4} (#5)}
-  \subsubsection* {#1}
+  \subsection* {#2 -- #3: \textbf{#4}
+  (#5)\hfill\textcolor{subsubsectioncolor}{\textmd{#1}}}
 }
 
 \newcommand{\techstack}[1]{
-  \subsubsection* {Thechnology \& infrostructure stack}
+  \subsubsection* {Technology \& infrastructure stack}
     #1\nopagebreak
 }
 
@@ -65,3 +66,7 @@
   {\setlength{\parindent}{0cm}\color{subsubsectioncolor}\Large}
   {}
 %  {\setlength{\parindent}{default}}
+
+\newcommand{\jobnameinput}[1]{
+  \IfFileExists{#1_\jobname.tex}{\input{#1_\jobname}}{\input{#1_default}}
+}

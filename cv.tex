@@ -2,8 +2,7 @@
 
 %\pagestyle{empty}
 
-\title {CV}
-\author{Sokolik Grigorii}
+\title {\jobnameinput{partials/title}\!---\:\:Sokolik Grigorii}
 
 \begin {document}
 \maketitle
@@ -19,349 +18,88 @@
 \end{topline}
 
 \section* {About}
-I am a backend developer with more than 10 years of experience. I have a
-greate experience with the number of programming languages, including Go,
-Python, PHP and TypeScript, deep understanding of specifics of PostgreSQL,
-MySQL, Redis, MongoDB and ClickHouse database, and familiarity with modern
-infrostucture tools like Docker (Docker-Compose), Kubernetes (with Helm, Krane
-templates), Ansible, Chef and Puppet confiuration management systems. Also I
-tried on my own skin microservice design patterns as Sagas, Event Sourcing,
-CQRS, etc. From time to time I make contributions in huge opensource projects
-and have accepted PRs in
-\href{https://github.com/php/php-src/pulls?q=is\%3Apr+is\%3Aclosed+author\%3AGSokol}{\underline{PHP source}},
-\href{https://github.com/coreutils/coreutils/commits?author=GSokol}{\underline{Linux Coreutils}},
-\href{https://github.com/etcd-io/etcd/pulls?q=is\%3Apr+is\%3Aclosed+author\%3AGSokol}{\underline{etcd storage}},
-\href{https://github.com/Codeception/Codeception/pulls?q=is\%3Apr+is\%3Aclosed+author\%3AGSokol}{\underline{Codeception PHP test framework}},
-and some smaller ones. Also I have data enineering and team management
-experience. The last one was in cases when I started the project from scratch
-and it grew to big enough to require involving more engineers.
+  \jobnameinput{partials/about}
+
+
+\section* {Skills}
+  \begin{bulist}
+    \jobnameinput{partials/main_skills}
+  \end{bulist}
+  \jobnameinput{partials/misk_skills}
 
 
 \section* {Experience}
-  \workplace[Helsinki]{October 2022}{Present}{Smartly.io}{Data Engineer}
-    \begin{gaas}
-      \item Adopted kafka-connect to the company, with allowed to reduce
-        backend services integration process form more than month to 2 days.
-      \item Developed and maintain opensource DBT macros for staging Debezium
-        Kafka-Connect sources \\
-        (\href{https://github.com/smartlyio/debezium-stg}{https://github.com/smartlyio/debezium-stg}).
-      \item Adopted \textbf{Strimzi} kafka operator to provide zero-cost
-        Kafka-as-a-Service for development environment.
-      \item Developed and implemented TypeScript code generator to enforce
-        analytical events structure and integrate with Segment tracking plan.
-      \item eveloped Java UDTF-s to upload huge blobs to Snowflake.
-    \end{gaas}
-    \techstack{
-      Python, TypeScript, Java, SQL, DBT, Kubernetes, Kafka, Kafka-connect, Debezium,
-      Ansible, Aiflow
-    }
-    \devtools
-      Git, Github, Github Actions, Atlassian products, NeoVim, JFrog products
+  \jobnameinput{partials/job_places/smartly_09_19}
 
-  \workplace[Helsinki]{September 2019}{September 2022}{Smartly.io}{Software Engineer}
-    Maintained an integration with Facebook Marketing API. Developed
-    microservices.
-    \techstack{
-      PHP, TypeScript, JavaScript, React, Angular, Docker, Kubernetes, Ansible,
-      Redis, RabbitMQ, PostgreSQL, MongoDB
-    }
-    \devtools
-      Git, Github, Jenkins, Github Actions, Atlassian products, JetBrains
-      products, JFrog products
+  %\workplace[Minsk (Remote)]{July 2019}{September 2019}{Kurshi Games}
+      %{Lead Software Engineer}
+    %Short-term project to set up an infrostructure for a small Mobile game
+    %startup.
+    %\begin{gaas}
+      %\item Developed cost-effective (almost free) service for storing game
+        %configs and players' progress.
+      %\item Organized analytical events collection system.
+      %\item Built Vertica-based DWH with orchestration on airflow.
+      %\item Built CI/CD system on top of Google Cloud Builds.
+    %\end{gaas}
+    %\techstack{
+      %GCP, GCE, GKE, Golang, PHP, Docker, Kubernetes, Redis, RabbitMQ,
+      %PostgreSQL, Kafka, Vertica, Airflow
+    %}
+    %\devtools
+      %Git, Gitlab, Google Cloud Builds, Vim
 
-  \workplace{July 2019}{September 2019}{Kurshi Games}{Backand advisor}
-    \techstack{
-      GCP, GCE, GKE, Golang, PHP, Docker, Kubernetes, Redis, RabbitMQ,
-      PostgreSQL, Kafka, Vertica, Appache Airflow
-    }
-    \devtools
-      Git, Gitlab, Google Cloud Builds, Vim
+  \subsection* {Career break for movement to Finland}
 
-  \workplace{February 2019}{May 2019}{Acronis}{Senior developer}
-    \techstack{
-      Linux, OpenVZ, Docker, Kubernetes, Ansible, Percona, RabbitMQ, Golang,
-      Python, Nginx
-    }
-    \devtools
-      Jenkins, PyPi, Git, Vim, Atlassian products, JetBrains products
-  \pagebreak
+%\pagebreak
 
-  \workplace{October 2017}{January 2019}{AVITO}{Senior developer}
-    Avito is the most popular classifieds site in Russia and is the biggest
-    classifieds site in the world.
-    \begin{gaas}
-      \item Created fast, scalable and flexible analytic tool for professional
-        users (some similar to google analytics).
-      \item Increased stability of several services.
-      \item Began to lead team (solve internal problems, watch out for
-        motivation etc...).
-    \end{gaas}
-    \techstack{
-      Linux, Docker, Kubernetes, PostgreSQL, Vertica, ClickHouse, MongoDB,
-      Reddis, RabbitMQ, Kafka, Golang, PHP7, PHP-FPM, Nginx
-    }
-    \devtools
-      Composer, Git, Vim, Atlassian products, JetBrains products
+  %\workplace{February 2019}{May 2019}{Acronis}{Senior Software Engineer}
+    %\techstack{
+      %Python, Golang, OpenVZ, Docker, Kubernetes, Ansible, Percona, RabbitMQ
+    %}
+    %\devtools
+      %Jenkins, Git, Vim
+
+  \jobnameinput{partials/job_places/avito_10_17}
+
+
+\pagebreak
 
   \workplace[Berlin]{May 2016}{October 2017}{Ronte Limited}{Team lead}
     Build from scratch security first corporate chat (with file sharing,
     tasks, calendar etc). Then managed a team of two engineers and a dev ops.
     \begin{gaas}
       \item Create project's core architecture (secure chat + p2p calls)
-      \item Implemented CI/CD pipelines an created tools for it.
+      \item Implemented CI/CD pipelines and created tools for it.
       \item Managed development team.
     \end{gaas}
     \techstack{
-      Linux, Docker, Kubernetes, MongoDB, ZeroMQ, Reddis, Golang, PHP7,
-      PHP-FPM, Nginx
+      Golang, PHP, WebSocket, WebRTC, ICE(STUN+TURN), OpenSSL, SDP, Docker,
+      Kubernetes, MongoDB, ZeroMQ, Redis
     }
     \devtools
-      Jira, Jenkins, Composer, Git, Bitbucket, Vim
+      Jenkins, Composer, Git, Bitbucket, Vim
 
   \workplace{August 2015}{May 2016}{Delivery club LLC}{Senior developer,
-                                                       mobile API expert}
+  mobile API expert}
+    One of the top food delivery services in Russia.
     \begin{gaas}
-      \item Refactored CMS-like code, implement basic MVC patterns.
-      \item Developed and implemented new oauth-like security policies and
-        TLS encryption.
-      \item Implemented unit-test coverage.
-      \item Provided guaranties of backward compatibility to previous API
-        versions.
+      \item Introduced TLS and OAuth to fix mobile API security violations,
+        which increased the number of orders by 20\%.
+      \item Refactored the app, which caused twice reduce time-to-market of
+        the new features.
+      \item Reduce number of rollbacks in 3 times by introducing and enforcing
+        unit-test coverage.
     \end{gaas}
     \techstack{
-      IBM WebSphere, CentOS Linux, MySQL, RabbitMQ, Elastic search, Memcached,
-      PHP, PHP-FPM, Nginx
+      PHP, MySQL, Elastic search, Memcached
     }
     \devtools
-      Jira, Confluence, Vagrant, Puppet, TeamCity, Capistrano, Composer,
-      NewRelic, Kibana, Git, Github, Vim, PhpStorm
-
-  \workplace{Aplil 2015}{August 2015}{Badoo LTD}{Senior developer, billing}
-    \begin{gaas}
-      \item Migrated some payment system integration's from oldstyle PHP4 code
-        to the modern one.
-    \end{gaas}
-    \techstack{
-      \ldots (NDA-protected Virtualization level), Suse Linux, Mysql,
-        Memcached,
-      CPQ (Cross-Platform-Queue): NDA-protected prortietary Mysql-based queue,
-      C/C++ daemons, RRD, PHP, PHP-FPM, Nginx
-    }
-    \devtools
-      Jira, Confluence, google infrostructure, TeamCity, Splunk, self-written
-      tools, Git, Subversion (they really use both), Vim, PhpStorm
-
-  \workplace{August 2013}{March 2015}{LLC GENES1S INTELLECTUAL SOLUTIONS}{Lead
-                                                                    developer}
-    \begin{gaas}
-      \item Development management of closed indoor ERP system for binary
-        options and bets companies.
-      \item Management group up to 5 developers.
-      \item Participation in negotiations with clients and designers to
-        introduce products and discuss technical issues, requirements and
-        qualities.
-    \end{gaas}
-    \techstack{
-      Linux, Mysql, Redis, Memcached, Python (with NumPy/SciPy \& Pandas),
-      PHP, PHP-FPM, Apache/Nginx (I've made the migration), Javascript,
-      ExtJs, JQuery (I've made the migtration from ExtJs)
-    }
-    \devtools
-    \subsubsection* {Development \& management tools \& services}
-      RedMine, Subversion/Git (I've made the migration), Vim, PhpStorm
-
-  \workplace{May 2013}{June 2013}{Bradbury Lab LTD}{Developer}
-    \gaa
-      Development of server-side video stream management application.
-    \techstack{
-      \textbf{Linux}, \textbf{MongoDB}, \textbf{Memcached}, \textbf{Python},
-      Akashi (Django-based framework), \textbf{UWSGI}, \textbf{Nginx}
-    }
-    \devtools
-      Issue tracker (I don't remember was is Jira or Redmine, but deffinitely
-      one of them), VCS (I'm really don't rememger what it was), \textbf{Salt},
-      \textbf{Vim}, \textbf{PyCharm}
-  \pagebreak
-
-  \workplace{August 2012}{May 2013}{Probusiness bank JSC}{Web developer}
-    \gaa
-      Developing backend web applications:
-      \begin{bulist}
-        \item \textbf{\url{https://yourcredithistory.ru}}
-        \item \textbf{\url{https://smartmarket.net}}
-      \end{bulist}
-    \techstack{
-      Debian Linux, PostgreSQL, Memcached, Python, Django, Gevent, Flask,
-      UWSGI, Nginx
-    }
-    \devtools
-      Jira, Confluence, Git, PyCharm, Vim, NumPy\/SciPy \& Pandas (for
-      analytical models experiments, was not used in production)
-
-  \workplace{March 2012}{July 2012}{101XP}{Social game porting engineer}
-    \subsubsection* {Role}
-      I localized apps, that has been bought from foreign developers and
-      integrate it with social networks.
-    \begin{gaas}
-      \item \textbf{Zombie Lane} -- porting social game from Facebook to
-        Hyves (\url{https://www.hyves.nl})
-      \item \textbf{Wasteland Empires} -- portingsocial game from Facebook to
-        Vk (\url{https://www.vk.com}) and Odnoklassinki
-        (\url{https://www.odnoklassniki.ru})
-    \end{gaas}
-    \techstack{
-      Debian Linux, Mysql, Memcached, Java, Tomcat, CoachDB, Redis, Python,
-      Tornado, ActionScript
-    }
-    \devtools
-      Redmine, google infrostucture, Subversion, Eclipse
-
-  \workplace{February 2011}{February 2012}{Game-Insight LLC}{Junior
-      programmer, programmer, fullstack developer}
-    \subsubsection* {Projects}
-      \begin{bulist}
-        \item \textbf{Funzay} -- high load social network, container for flash
-          games
-          \begin{list}{$\circ$}{}
-            \item developing some services
-            \item HTML markup 
-          \end{list} 
-        \item \textbf{Game-insight} -- official company's site
-          \begin{list}{$\circ$}{}
-            \item core developing
-            \item developing services
-          \end{list}
-      \end{bulist}
-    \techstack{
-      Gentoo Linux, PostgreSQL, Memcached, PHP, PHP-FPM, Nginx, Javascript,
-      HTML, CSS, Android
-    }
-    \devtools
-      Jira, Subvrsion, Git (for Android repositories only), Eclipse, PhpStorm
-
-  \workplace{March 2009}{November 2010}{Euroinvest LLC}{Programmer of
-                                                        IT-department}
-    \begin{gaas}
-      \item developing extensions for MetaStock
-      \item creating models for trading strategies
-    \end{gaas}
-    \techstack{
-      Windows Server 2008, Microsoft SQL Server, C/C++, STL, Boost
-    }
-    \devtools
-      Visual Studio
-
+      Vagrant, Puppet, TeamCity, Capistrano, Composer, NewRelic, Kibana, Git,
+        Github, Vim
+  \subsection* {March 2009 – July 2015: Lots of companies (Software Engineer)}
 
 \section* {Education}
-2005-2010 -- MSU, department of mechanics and mathematics
+2005-2010 -- MSU, Master of Mathematics
 %\item \href{http://php.feedme.ru/widget.php?code=puyg9l1a8qx4f3scrbtgedm5j60hzw2v}{\includegraphics{feed_me_widget}}
-
-
-\section* {Core skills}
-  \begin{bulist}
-    \item Knowledge of OOP programming paradigms like SOLID
-    \item Knowledge of main design patterns like Singletone, Abstract Factory,
-      Dependency Injection and so on
-    \item Practicing extreme programming development methodology, for instance
-      TDD or BDD patterns 
-    \item Knowledge of main software development workflows like Agile, Kanban
-  \end{bulist}
-
-\pagebreak
-
-
-\section* {Programming abilities}
-  \begin{multicols}{3}
-    \begin {list}{\textbullet}{\itemsep=0mm}
-      \item \textbf{Python 2.x / 3.x}
-        \begin {list}{$\circ$}{}
-          \item asyncio
-          \item Django
-          \item Tornado
-          \item Twisted
-          \item Flask
-          \item Gevent
-          \item SciPy/NumPy/scikit-learn
-          \item Pandas
-          \item unittest
-        \end{list}
-      \item \textbf{PHP}
-        \begin {list}{$\circ$}{}
-          \item Silex
-          \item Symfony
-          \item Composer
-          \item XDebug
-          \item PHPUnit
-        \end{list}
-      \item \textbf{TypeScript}
-        \begin {list}{$\circ$}{}
-          \item Express
-          \item Koajs
-          \item Nextjs
-          \item React (+ Redux)
-          \item Jest
-          \item Karma
-        \end{list}
-      \columnbreak
-      \item \textbf{Go Lang}
-      \item \textbf{ShellScript/Bash}
-      \item \textbf{Queues}
-        \begin {list}{$\circ$}{}
-          \item ZeroMQ
-          \item RabbitMQ
-          \item Kafka
-        \end{list}
-      \item \textbf{SQL DBMS}
-        \begin {list}{$\circ$}{}
-          \item MySQL
-          \item PostgreSQL
-          \item SQLite
-          \item H2
-        \end{list}
-      \item \textbf{Configuration management}
-        \begin {list}{$\circ$}{}
-          \item Ansible
-          \item Puppet
-          \item Chef
-          \item Terraform
-        \end{list}
-      \columnbreak
-      \item \textbf{NOSQL}
-        \begin {list}{$\circ$}{}
-          \item MongoDB
-          \item Cassandra
-          \item CoachDB
-          \item Redis
-          \item Memcached
-          \item Elastic Search
-          \item Sphinx
-          \item Vertica
-          \item ClickHouse
-          \item Snowflake
-        \end{list}
-      \item \textbf{CI/CD}
-        \begin {list}{$\circ$}{}
-          \item Jenkins
-          \item Github Actions
-          \item Gitlab CI
-          \item Helm
-          \item TeamCity
-          \item Salt
-        \end{list}
-    \end{list}
-  \end{multicols}
-
-
-\section* {Other abilities}
-\begin {list}{\textbullet}{\itemsep=0mm}
-  \item Ability to use \textbf{git}, \textbf{mercurial} or \textbf{subversion}
-    version control systems.
-  \item Ability to impose in \textbf{LaTeX}.
-  \item Fluent English, beginner Finnish.
-  \item Several skills in \textbf{Java} (\textbf{Maven}, \textbf{Spring},
-    \textbf{GWT/Ext GWT}, \textbf{JUnit}).
-  \item Several skills in \textbf{Android} development.
-  \item Several skills in \textbf{C/C++} (\textbf{CMake}, \textbf{gtest},
-    \textbf{boost/test}, \textbf{boost/asio}) development.
-\end {list}
 \end{document}

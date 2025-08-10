@@ -1,0 +1,33 @@
+\workplace[Helsinki]{September 2019}{Present}{Smartly.io}{Senior Software Engineer}
+  One of the world’s largest SaaS digital advertising platforms, managing
+  nearly \$5B in ad spend with 700+ brands worldwide.
+  \begin{gaas}
+    \item Adopted kafka-connect to the company, which allowed to reduce
+      backend services integration process from more than a month to 2 days.
+    \item Developed and maintained open-source DBT macros for automating
+      staging of Debezium Kafka-Connect sources, simplifying the analysis of
+      system state changes and trends. \\
+      (\href{https://github.com/smartlyio/debezium-stg}{https://github.com/smartlyio/debezium-stg}).
+    \item Adopted \textbf{Strimzi} kafka operator to provide relatively
+      cheap Kafka-as-a-Service for development environment and IaS
+      management of kafka resources.
+    \item Developed and implemented TypeScript code generator to enforce
+      analytical events schema and integrate with Segment tracking plan.
+      That saved us from illformed frontend analytical events.
+    \item Developed Java UDTFs to bypass Snowflake's line length limitation,
+      enabling the upload of large JSONs.
+    \item Maintained an integration with Facebook Marketing API. Supported
+      breaking API changes regularly announced by Facebook in a timely
+      manner.
+    \item Migrated from PHP worker-based to Node async request handling
+      approach to effectively increase number of customers we could serve.
+    \item Developed advertisement campaign management tool for customers,
+      which allows collaborative work and templating of campaigns.
+  \end{gaas}
+  \techstack{
+    SQL, Python, DBT, TypeScript, Java, TypeScript/JavaScript, React, Angular,
+    WebSocket, Docker, Kubernetes, Ansible, Terraform, Kafka, Kafka-connect,
+    Debezium, Redis, RabbitMQ, PostgreSQL, MongoDB, Airflow
+  }
+  \devtools
+    Git, Github, Github Actions, NeoVim, Artifactory, Vault
